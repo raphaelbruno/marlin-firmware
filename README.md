@@ -1,6 +1,8 @@
 # Configuration Marlin Firmware 2.0.5.3 (MKS Base 1.4)
 Cofiguration files of Marlin Firmware to Tevo Tarantula (MKS Base 1.4)
 
+![](mainboard.jpg)
+
 *Modifications from Original:*
 - Inverted Z Axis Motor
 - Added Auto Bed Leveling (Sensor SN04)
