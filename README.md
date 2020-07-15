@@ -1,4 +1,4 @@
-# Configuration Marlin Firmware 2.0.6 (bugfix) (MKS Base 1.4)
+# Configuration Marlin Firmware 2.0.6 (bugfix)
 Cofiguration files of Marlin Firmware to Tevo Tarantula (MKS Base 1.4)
 
 ![](mainboard.jpg)
