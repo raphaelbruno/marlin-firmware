@@ -22,10 +22,13 @@
 #pragma once
 
 /**
- * Made with Marlin Bitmap Converter
- * http://marlinfw.org/tools/u8glib/converter.html
+ * Custom Boot Screen bitmap
  *
- * This bitmap from 128x48 C/C++ data
+ * Place this file in the root with your configuration files
+ * and enable SHOW_CUSTOM_BOOTSCREEN in Configuration.h.
+ * 
+ * Use the Marlin Bitmap Converter to make your own:
+ * http://marlinfw.org/tools/u8glib/converter.html
  */
  
 #define CUSTOM_BOOTSCREEN_TIMEOUT 2000

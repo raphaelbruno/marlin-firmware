@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -31,9 +31,11 @@
  * http://marlinfw.org/tools/u8glib/converter.html
  */
 
-#define STATUS_LOGO_WIDTH 32
-
-//============================================
+//
+// Status Screen Logo bitmap
+//
+#define STATUS_LOGO_Y            0
+#define STATUS_LOGO_WIDTH       32
 
 const unsigned char status_logo_bmp[] PROGMEM = {
   B00000000,B00000000,B00000000,B00000000, // ................................
@@ -64,7 +66,8 @@ const unsigned char status_logo_bmp[] PROGMEM = {
   B11111101,B11011101,B01110101,B11011110, // ######.###.###.#.###.#.###.####.
   B11111101,B11000011,B01110101,B11011110, // ######.###....##.###.#.###.####.
   B11111101,B11011111,B10101101,B11011110, // ######.###.######.#.##.###.####.
-  B11111101,B11100011,B11011110,B00111110  // ######.####...####.####...#####.
+  B11111101,B11100011,B11011110,B00111110, // ######.####...####.####...#####.
+  B11111111,B11111111,B11111111,B11111110  // ###############################.
 };
 
 //
@@ -73,5 +76,10 @@ const unsigned char status_logo_bmp[] PROGMEM = {
 #define STATUS_HOTEND_ANIM
 #define STATUS_BED_ANIM
 #define STATUS_HEATERS_XSPACE   20
-#define STATUS_HEATERS_X      44
-#define STATUS_BED_X          72
+#if HOTENDS < 2
+  #define STATUS_HEATERS_X      44
+  #define STATUS_BED_X          72
+#else
+  #define STATUS_HEATERS_X      40
+  #define STATUS_BED_X          80
+#endif
